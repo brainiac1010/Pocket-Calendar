@@ -61,12 +61,17 @@
         flex-direction: column;
     }
 
-    .left, .right {
+    .left,
+    .right {
         width: 100%;
     }
 
     #date {
-        font-size: 60px;
-        line-height: 60px;
+        font-size: 40px;
+        
+        line-height: 1;
+      
+        margin-top: 20px;
+        
     }
 }
