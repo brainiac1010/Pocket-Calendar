@@ -12,16 +12,34 @@
     <div class="container">
         <div class="calender">
             <div class="left">
-                <p>01</p>
-                <p>Sunday</p>
+                <p id="date">01</p>
+                <p id="day">Sunday</p>
             </div>
             <div class="right">
-                <p>January</p>
-                <p>2020</p>
+                <p id="month">January</p>
+                <p id="year">2020</p>
             </div>
         </div>
 
     </div>
+
+    <script>
+        let date = document.getElementById("date");
+        let day = document.getElementById("day");
+        let month = document.getElementById("month");
+        let year = document.getElementById("year");
+
+        const today = new Date();
+        console.log(today);
+        const weekDays = ["Sunday", "Monday", "Tuesday", "Wednestday", "Thusday", "Friday", "saturday"];
+        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+        date.innerHTML = today.getDate();
+        day.innerHTML = weekDays[today.getDay()];
+        month.innerHTML = months[today.getMonth()];
+        year.innerHTML = today.getFullYear();
+
+    </script>
 </body>
 
 </html>
